@@ -6,6 +6,8 @@ import HomePage from './component/pages/Home';
 // import PlanTour from './component/pages/PlanTour';
 // import LiveLocation from './component/pages/LiveLocation';
 import ErrorPage from './component/pages/Error';
+import Test from './component/pages/test';
+import CreateOrder from './component/pages/createOrder';
 
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
       <Routes>
         <Route exact path='/page-not-available' element={<ErrorPage/>} ></Route>
         <Route exact path='/' element={<HomePage/>} ></Route>
+        <Route exact path='/test' element={<Test/>} ></Route>
+        <Route exact path='/createOrder' element={<CreateOrder/>} ></Route>
       </Routes>
         {/* <Route path='/' Component={Home} />
         <Route path='/about' Component={About} />

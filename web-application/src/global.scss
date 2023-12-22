@@ -6225,6 +6225,14 @@ textarea.form-control-lg {
     width: var(--bs-popover-arrow-width)
 }
 
+.MuiDataGrid-panel{
+    transform: translate3d(30vw, 102px, 0px) !important;
+}
+
+.MuiDataGrid-filterForm{
+    background-color: powderblue !important;
+}
+
 .popover .popover-arrow:after,.popover .popover-arrow:before {
     border: 0 solid #0000;
     content: "";
