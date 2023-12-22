@@ -27,7 +27,7 @@ class HomePage extends Component {
                     <DataTable/>
                 </div>
             </div>
-         );
+        );
     }
 }
  
