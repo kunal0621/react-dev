@@ -1,1 +1,1 @@
-const { mongoose } = require("mongoose") 
+import monoess from 'mongoose'

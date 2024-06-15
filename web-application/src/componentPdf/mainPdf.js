@@ -1,14 +1,7 @@
-import Preview from './PDF/Preview'
+import Preview from './generatePDF'
 import React, { useState } from 'react'
-function createPDF() {
-  const [profile, setProfile] = useState({
-    type: 'Profile',
-    name: 'John Doe',
-    profession: 'Junior Developer',
-    profileImageURL: 'https://i.imgur.com/f6L6Y57.png',
-    display: true,
-    about: 'About...',
-  })
+function CreatePDF(data) {
+  const [profile, setProfile] = useState(data)
 
   const handleChange = (name, value) => {
     setProfile({ ...profile, [name]: value })
@@ -70,4 +63,4 @@ function createPDF() {
   )
 }
 
-export default createPDF
+export default CreatePDF

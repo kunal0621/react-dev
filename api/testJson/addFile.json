@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "fileName": "first Object with id 1",
+        "squadName": "First squad",
+        "member": ["sarthak", "arveen", "jyoti"],
+        "active": true
+    },
+    {
+        "id": 2,
+        "fileName": "second Object with id 2",
+        "squadName": "Second squad",
+        "member": ["kunal", "manmay", "abhishek"],
+        "active": false
+    },
+    {
+        "id": 3,
+        "fileName": "third Object with id 3",
+        "squadName": "Third squad",
+        "member": ["shaswat", "deepti", "babru"],
+        "active": false
+    },
+    {
+        "id": 4,
+        "fileName": "forth Object with id 4",
+        "squadName": "Forth squad",
+        "member": ["dibya", "bikram", "shankar"],
+        "active": true
+    },
+    {
+        "id": 5,
+        "fileName": "fifth Object with id 5",
+        "squadName": "Fifth squad",
+        "member": ["Deepak", "malvin", "versha"],
+        "active": true
+    }
+]

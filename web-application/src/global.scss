@@ -6,6 +6,26 @@ a code,pre code {
     color: inherit
 }
 
+.div-padding {
+    padding-top: 0.5rem;
+}
+
+.page-container {
+    padding: 2rem 2rem 2rem 2rem ;
+}
+
+.bodyContainer {
+    background-image: url(./jairamlogo.png);
+}
+
+.navbar-bgcolor {
+    background-color: gainsboro !important;
+}
+
+.input-width {
+    width: 87%;
+}
+
 .tableClass {
     position: relative;
     outline: 0px;
@@ -53,10 +73,7 @@ blockquote,pre {
     --ifm-color-emphasis-500: var(--ifm-color-gray-500)
 }
 
-body,html {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent
-}
+
 
 pre,table {
     overflow: auto

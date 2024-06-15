@@ -16,7 +16,7 @@ export default StyleSheet.create({
     height: '100%',
     backgroundColor: '#084c41',
   },
-  profile_container: {
+  header_container: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
