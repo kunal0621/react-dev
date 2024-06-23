@@ -1,6 +1,6 @@
-function Button({onClick, className, children}) {
+function Button({onClick, className, children, isAllInput}) {
     return ( 
-        <div onClick={onClick} className={className}>
+        <div onClick={onClick} className={className} disabled={isAllInput}>
             {children}
         </div>
     );

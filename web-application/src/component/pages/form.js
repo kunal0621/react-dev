@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Errors from "./Errors";
 
-function Form({title, handleInput, handleSave, error}) {
+function Form({title, handleInput, handleSave, error, isAllInput}) {
     return (
         <form>
             <h3>{title}</h3>
@@ -22,7 +22,7 @@ function Form({title, handleInput, handleSave, error}) {
                 <label>Status:</label>
                 <input type="text" name="active" onChange={handleInput} />
             </div>
-            <Button className="sucess" onClick={handleSave}>Save</Button>
+            <Button isAllInput={true} className="sucess" onClick={handleSave}>Save</Button>
         </form>
     );
 }

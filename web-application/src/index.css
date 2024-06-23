@@ -22,7 +22,7 @@ body {
   height: 100vh;
 }
 
-.active-status{
+.active-status {
   color: #20a726;
 }
 
@@ -229,4 +229,11 @@ form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.sucess {
+  background-color: #00684a;
+  width: 10%;
+  text-align: center;
+  height: 28px;
 }

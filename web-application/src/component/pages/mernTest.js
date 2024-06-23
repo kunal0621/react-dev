@@ -15,7 +15,8 @@ class MernTest extends Component {
             error: undefined,
             showModel: false,
             formValue: {},
-            formError: undefined
+            formError: undefined,
+            isAllInput: false
         }
     }
 
@@ -41,15 +42,17 @@ class MernTest extends Component {
     handleInput = (event) => {
         const { name, value } = event.target
         let { formValue } = this.state
-        this.setState({
+        formValue = {
             ...formValue,
             [name]: name === 'member' ? value.split(',') : value
-        })
+        }
+        this.setState({formValue})
     }
 
     handleSubmit = (event) => {
         const { formValue } = this.state
-        const payload = formValue
+        const payload = []
+        payload.push(formValue)
         axios.post(`http://localhost:4000/addTeam`, payload).then(resp => {
             window.alert('Player added sucessfully')
             this.fetchData()
@@ -85,7 +88,7 @@ class MernTest extends Component {
                     </div>
                     <Modal show={showModel} closeModal={this.closeModal}>
                         {
-                            <Form handleSave={this.handleSubmit} handleInput={this.handleInput} title={"Add Team"} error={formError} />
+                            <Form isAllInput={this.state.isAllInput} handleSave={this.handleSubmit} handleInput={this.handleInput} title={"Add Team"} error={formError} />
                         }
                     </Modal>
                 </div>

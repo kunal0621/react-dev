@@ -1,25 +1,28 @@
-import Express from 'express'
-import cors from 'cors'
-import fs from 'fs'
-// import readjson from './testJson/addFile.json' assert { type: 'json'}
-const app = Express()
+import dotenv from "dotenv";
+import { express } from "./app";
+import { DBconection } from "./mongoose";
+dotenv.config()
 
-app.use(cors())
-app.use(Express.json())
+// Handling Uncaught Exception
+process.on("uncaughtException", (err) => {
+  console.log(`Error: ${err.message}`);
+  console.log(`Shutting down the server due to Uncaught Exception`);
+  process.exit(1);
+});
 
-app.get('/tst/:id', (req, res) => {
-  let data = fs.readFileSync('./testJson/addFile.json')
-  let parsedFile = JSON.parse(data)
-  let fileToRead = parsedFile.filter((item) => item.id === Number(req.params.id))
-  res.status(200).send(fileToRead)
-})
+// Connecting to database
+DBconection();
 
-app.post('/addTeam', (req, res) => {
-  let data = fs.writeFileSync('./testJson/addFile.json', req.body)
-  let parsedFile = JSON.parse(data)
-  res.status(200).send(parsedFile)
-})
+const server = express.a.listen(process.env.PORT, () => {
+  console.log(`Server is working on http://localhost:${process.env.PORT}`);
+});
 
-app.listen(4000, () => {
-  console.log('app listening on port 4000')
-})
+// Unhandled Promise Rejection
+process.on("unhandledRejection", (err) => {
+  console.log(`Error: ${err.message}`);
+  console.log(`Shutting down the server due to Unhandled Promise Rejection`);
+
+  server.close(() => {
+    process.exit(1);
+  });
+});
