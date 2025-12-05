@@ -1,7 +1,5 @@
-import React from 'react';
 import { useDispatch, shallowEqual, useSelector } from 'react-redux';
 import { Accordion } from 'react-bootstrap';
-import axios from 'axios'
 import { setDsaQuestion1Answer, setDsaQuestion1State, setDsaQuestion2Answer, setDsaQuestion2State2, setDsaQuestion2State1, setDsaQuestion3State, setDsaQuestion3Answer } from '../../../store/dsaQuestionSlice/two-pointer-slice';
 
 const TwoPointerContainer = () => {
@@ -30,15 +28,7 @@ const TwoPointerContainer = () => {
     const handleOnChangeDebounce = (event) => {
         setTimeout(() => {
             handleAnswer(event)
-            callAPIservice()
         }, 500);
-    }
-    const callAPIservice = () => {
-        axios.get(`${urlGateway}/tst/1`).then(res => {
-            console.log('123', res.data)
-        }).catch(error => {
-            console.error('error fetching data', error)
-        })
     }
     
     const handleAnswer = (event) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 import { setDsaQuestion1Answer, setDsaQuestion1State, setDsaQuestion2Answer, setDsaQuestion2State1, setDsaQuestion2State2, setDsaQuestion3Answer, setDsaQuestion3State1, setDsaQuestion3State2, setDsaQuestion4Answer, setDsaQuestion4State, setDsaQuestion5Answer, setDsaQuestion5State, setDsaQuestion6Answer, setDsaQuestion6State1, setDsaQuestion6State2, setDsaQuestion7Answer, setDsaQuestion7State, setDsaQuestion8Answer, setDsaQuestion8State, setDsaQuestion9Answer, setDsaQuestion9State } from '../../../store/dsaQuestionSlice/array-dsa-slice'
 import { Accordion,  } from 'react-bootstrap';
